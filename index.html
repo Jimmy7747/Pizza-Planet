@@ -5,76 +5,92 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
             <nav>
-                <a href="/Pizza-Planet/index.html">Home</a>
-                <a href="/Pizza-Planet/menu.html">Menu</a>
-                <a href="/Pizza-Planet/buildpizza.html">Build Your Pizza</a>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="buildpizza.html">Build Your Pizza</a>
             </nav>
         </header>
         <main>
             <section class="banner">
-                <h1>Welcome to Planet Pizza</h1>
-                <p>Out of This World Flavor, Straight from Planet Pizza</p>
-            </section>
-            <section class="story">
-                <h2>Our Story</h2>
-                <p>Pizza Planet opened in 2045, founded by an alien couple who came down to Earth in 2025. It initially started out as a small pop-up in Binghamton, but they instantaneously became a hit because of thier unique pizza combinations and flavor explosions from outer space! There's no other pizza like Pizza Planet, our super secret alien family pizza recipe has been passed down for generations and we are glad to be able to share it with humans on Earth.
-                <p>Although the alien couple retired and went back to thier home planet, MIS, their Pizza Planet legacy continues to be carried out by their 25 grandalienchildren. </p> </p>
-            </section>
-            <section class="featured">
-                <h2>Our Featured Pizzas</h2>
-                <div class="home_pizzas">
-                    <div class="home_meteor">
-                        <img src="img/meteor-meatball.JPEG">
-                        <h4>The Meteor Meatball</h4>
-                        <p>A meatball explosion from outer space!</p>
-                        <p>Meatballs, pepperoni, sausage, bacon</p>
-                    </div>
-                    <div class="home_comet">
-                        <img src="img/bbq-comet.JPEG">
-                        <h4>BBQ Comet</h4>
-                        <p>This smoky comet leaves a flavor trail!</p>                          
-                        <p>BBQ chicken, red onions, mozzarella, cilantro</p>
-                    </div>
-                    <div class="home_build">
-                        <img src="img/build-pizza.JPEG">
-                        <h4>Build Your Own</h4>
-                        <p>Choose from a variety of toppings, vast as the Milky Way!</p>                          
-                    </div>
-                    <div class="buttons">
-                        <a class="menu_button" href="placeholder2">
-                            <button>Menu Page</button>
-                        </a>
-                        <a class="order_button" href="placeholder3">
-                            <button>Order Online</button>
-                        </a>
-                    </div>
+                <div class="banner_text">
+                    <h1>Specialty <span class="highlight">Pizzas Menu</span></h1>
                 </div>
             </section>
-
+          <div class="menu">
+              <div class="menu-item">
+                  <span class="menu-item-name">The Meteor Meatball</span>
+                  <span class="price">$15.99</span>
+              </div>
+              <div class="description">
+                  <p>A meatball explosion from outer space!</p>
+                  <p>Meatballs, pepperoni, sausage, bacon</p>
+              </div>
+              <div class="menu-item">
+                  <span class="menu-item-name">BBQ Comet</span>
+                  <span class="price">$16.99</span>
+              </div>
+              <div class="description">
+                  <p>This smoky comet leaves a flavor trail!</p>
+                  <p>BBQ chicken, red onions, mozzarella, cilantro</p>
+              </div>
+              <div class="menu-item">
+                  <span class="menu-item-name">Galactic Garden</span>
+                  <span class="price">$14.99</span>
+              </div>
+              <div class="description">
+                  <p>A veggie blast from the green side of the galaxy!</p>
+                  <p>Mushrooms, onions, green peppers, black olives, tomatoes</p>
+              </div>
+              <div class="menu-item">
+                  <span class="menu-item-name">Supernova Spice</span>
+                  <span class="price">$17.99</span>
+              </div>
+              <div class="description">
+                  <p>This one brings the heat from the heart of a star!</p>
+                  <p>Buffalo sauce, jalapeños, spicy chicken, red pepper flakes</p>
+              </div>
+              <div class="menu-item">
+                  <span class="menu-item-name">Build Your Own</span>
+                  <span class="price">$15.99</span>
+              </div>
+              <div class="description">
+                  <p>Build your own pizza, choose from a variety of toppings, vast as the Milky Way!</p>
+                  <p>Toppings: pepperoni, sausage, bacon, chicken, mushroom, onion, pepper, black olives, pineapple</p>
+                  <p>Sauces: marinara, alfredo, buffalo, barbeque</p>
+                  <p>Toppers: balsamic glaze, arugula, ranch drizzle, fresh basil</p>
+              </div>
+          </div>
         </main>
-        <script src="js/placeholder.js"></script>
-        <footer>
-            <div class="footer-content">
-                <div>
-                    <p><strong>Pizza Planet</strong></p>
-                    <p>165 Court St, Binghamton, NY 13870</p>
-                </div>
-                <div>
-                    <p><strong>Hours</strong></p>
-                    <p>Open Daily: 11AM – 9PM</p>
-                </div>
-                <div>
-                    <p><strong>Contact</strong></p>
-                    <p>(917) 999-9999</p>
-                    <p><a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a></p>
-                </div>
+        <script src="js/build-submit.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Pizza Planet</strong></p>
+                <p>165 Court St, Binghamton, NY 13870</p>
             </div>
-            <p style="margin-top: 1rem;">&copy; 2025 Pizza Planet. All Rights Reserved.</p>
-        </footer>
+            <div>
+                <p><strong>Hours</strong></p>
+                <p>Open Daily: 11AM – 9PM</p>
+            </div>
+            <div>
+                <p><strong>Contact</strong></p>
+                <p>(917) 999-9999</p>
+                <p><a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a></p>
+            </div>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Pizza Planet. All Rights Reserved. A small sample change</p>
+    </footer>
     </body>
 </html>
+  
+          
