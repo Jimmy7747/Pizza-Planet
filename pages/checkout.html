@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
+        <nav>
+            <a href="pages/index.html">Home</a>
+            <a href="pages/menu.html">Menu</a>
+            <a href="pages/buildpizza.html">Order Online</a>
+            <div id="cart-container" style="position: relative; cursor: pointer">
+                Cart <span id="cart-count">0</span>
+                <div id="cart-dropdown" class="hidden">
+                    <ul id="cart-items"></ul>
+                    <div class="cart-actions">
+                        <button id="checkout-btn">Checkout</button>
+                        <button id="clear-cart-btn">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout">
+            <h1>Checkout</h1>
+            <p>Please confirm your order and enter your pickup details.</p>
+            <p style="color: #555; margin-bottom: 1rem">
+                <em>Note:</em> Online pickup reservations are for
+                <strong>same-day orders only</strong>. Orders are placed immediately
+                and are generally ready for pickup within <strong>30 minutes</strong>.
+            </p>
+
+            <div id="checkout-cart">
+                <h2>Your Order</h2>
+                <ul id="checkout-items">
+                    <!-- JS will insert here -->
+                </ul>
+                <p>
+                    <strong>Subtotal:</strong> $<span id="checkout-subtotal">0.00</span>
+                </p>
+                <p><strong>Tax (8%):</strong> $<span id="checkout-tax">0.00</span></p>
+                <p><strong>Total:</strong> $<span id="checkout-total">0.00</span></p>
+            </div>
+
+            <form id="pickup-form">
+                <label for="name">Full Name:</label><br />
+                <input type="text" id="name" name="name" required /><br /><br />
+
+                <label for="phone">Phone Number:</label><br />
+                <input type="tel" id="phone" name="phone" required /><br /><br />
+
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" required /><br /><br />
+
+                <label for="instructions">Instructions or Allergies:</label><br />
+                <textarea id="instructions" name="instructions" rows="4"
+                    placeholder="Let us know if you have any allergies or pickup notes..."></textarea><br /><br />
+
+                <button type="submit">Confirm Order</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/checkout.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Pizza Planet</strong></p>
+                <p>165 Court St, Binghamton, NY 13870</p>
+            </div>
+            <div>
+                <p><strong>Hours</strong></p>
+                <p>Open Daily: 11AM – 9PM</p>
+            </div>
+            <div>
+                <p><strong>Contact</strong></p>
+                <p>(917) 999-9999</p>
+                <p>
+                    <a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-top: 1rem">
+            &copy; 2025 Pizza Planet. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
