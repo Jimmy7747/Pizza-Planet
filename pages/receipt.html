@@ -1,83 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Receipt</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/receipt.css" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Receipt</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/receipt.css" />
 
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  </head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+</head>
 
-  <body>
-    <header>
-      <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="buildpizza.html">Order Online</a>
-      </nav>
-    </header>
-
-    <main class="receipt-container">
-      <h1>Your Pizza Receipt</h1>
-      <p>Thank you for your order!</p>
-      <p>
-        Your order will be ready for pickup in approximately 30 minutes. Please
-        keep in mind that we only accept cash in-store.
-      </p>
-
-      <table class="receipt-table">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Details</th>
-            <th>Qty</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody id="receipt-body">
-          <!-- JS Injection Here -->
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="3" style="text-align: right">
-              <strong>Total:</strong>
-            </td>
-            <td id="receipt-total"></td>
-          </tr>
-        </tfoot>
-      </table>
-    </main>
-
-    <script src="js/build-submit.js"></script>
-
-    <footer>
-      <div class="footer-content">
-        <div>
-          <p><strong>Pizza Planet</strong></p>
-          <p>165 Court St, Binghamton, NY 13870</p>
-        </div>
-        <div>
-          <p><strong>Hours</strong></p>
-          <p>Open Daily: 11AM – 9PM</p>
-        </div>
-        <div>
-          <p><strong>Contact</strong></p>
-          <p>(917) 999-9999</p>
-          <p>
-            <a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a>
-          </p>
+<body>
+  <header>
+    <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
+    <nav>
+      <a href="pages/index.html">Home</a>
+      <a href="pages/menu.html">Menu</a>
+      <a href="pages/buildpizza.html">Order Online</a>
+      <div id="cart-container" style="position: relative; cursor: pointer">
+        Cart <span id="cart-count">0</span>
+        <div id="cart-dropdown" class="hidden">
+          <ul id="cart-items"></ul>
+          <div class="cart-actions">
+            <button id="checkout-btn">Checkout</button>
+            <button id="clear-cart-btn">Clear Cart</button>
+          </div>
         </div>
       </div>
-      <p style="margin-top: 1rem">
-        &copy; 2025 Pizza Planet. All Rights Reserved. A small sample change
-      </p>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <main class="receipt-container">
+    <h1>Your Pizza Receipt</h1>
+    <p>Thank you for your order!</p>
+    <p>
+      Your order will be ready for pickup in approximately 30 minutes. Please
+      keep in mind that we only accept cash in-store.
+    </p>
+
+    <table class="receipt-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Details</th>
+          <th>Qty</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody id="receipt-body">
+        <!-- JS Injection Here -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align: right">
+            <strong>Total:</strong>
+          </td>
+          <td id="receipt-total"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+  <script src="js/global.js"></script>
+  <script src="js/build-submit.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <p><strong>Pizza Planet</strong></p>
+        <p>165 Court St, Binghamton, NY 13870</p>
+      </div>
+      <div>
+        <p><strong>Hours</strong></p>
+        <p>Open Daily: 11AM – 9PM</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>(917) 999-9999</p>
+        <p>
+          <a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a>
+        </p>
+      </div>
+    </div>
+    <p style="margin-top: 1rem">
+      &copy; 2025 Pizza Planet. All Rights Reserved. A small sample change
+    </p>
+  </footer>
+</body>
+
 </html>

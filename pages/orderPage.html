@@ -11,16 +11,28 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="buildpizza.html">Order Online</a>
+            <a href="pages/index.html">Home</a>
+            <a href="pages/menu.html">Menu</a>
+            <a href="pages/buildpizza.html">Order Online</a>
+            <div id="cart-container" style="position: relative; cursor: pointer">
+                Cart <span id="cart-count">0</span>
+                <div id="cart-dropdown" class="hidden">
+                    <ul id="cart-items"></ul>
+                    <div class="cart-actions">
+                        <button id="checkout-btn">Checkout</button>
+                        <button id="clear-cart-btn">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -81,6 +93,7 @@
         </section>
 
     </main>
+    <script src="js/global.js"></script>
     <script src="js/build-submit.js"></script>
     <footer>
         <div class="footer-content">

@@ -1,84 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-       <title>Home</title>
-       <meta charset="utf-8"/>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="stylesheet" href="css/style.css">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 
 
-       <!-- Google Fonts -->
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-   </head>
-   <body>
-       <header>
-           <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
-           <nav>
-               <a href="index.html">Home</a>
-               <a href="menu.html">Menu</a>
-               <a href="buildpizza.html">Order Online</a>
-           </nav>
-       </header>
-       <main>
-           <section class="banner">
-               <div class="banner_text">
-                   <h1>Welcome to <span class="highlight">Pizza Planet</span></h1>
-                   <p>Out of This World Flavor, Straight from Pizza Planet.</p>
-               </div>
-           </section>
-           <section class="story">
-               <h2>Our Story</h2>
-               <p>Pizza Planet opened in 2045, founded by an alien couple who came down to Earth in 2025. It initially started out as a small pop-up in Binghamton, but they instantaneously became a hit because of their unique pizza combinations and flavor explosions from outer space! There's no other pizza like Pizza Planet, our super secret alien family pizza recipe has been passed down for generations and we are glad to be able to share it with humans on Earth.
-               <p>Although the alien couple retired and went back to their home planet, MIS, their Pizza Planet legacy continues to be carried out by their 25 grandalienchildren. </p> </p>
-           </section>
-           <section class="featured">
-               <h2>Featured Pizzas</h2>
-               <div class="home_pizzas">
-                   <div class="home_meteor">
-                       <img src="img/meteor-meatball.JPEG">
-                       <a href="menu.html"><h4>The Meteor Meatball</h4></a>
-                   </div>
-                   <div class="home_comet">
-                       <img src="img/bbq-comet.JPEG">
-                       <a href="menu.html"><h4>BBQ Comet</h4></a>
-                   </div>
-                   <div class="home_build">
-                       <img src="img/build-pizza.JPEG">
-                       <a href="buildpizza.html"><h4>Build Your Own</h4></a>                  
-                   </div>
-               </div>
-           </section>
-           <!--
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
+        <nav>
+            <a href="pages/index.html">Home</a>
+            <a href="pages/menu.html">Menu</a>
+            <a href="pages/buildpizza.html">Order Online</a>
+            <div id="cart-container" style="position: relative; cursor: pointer">
+                Cart <span id="cart-count">0</span>
+                <div id="cart-dropdown" class="hidden">
+                    <ul id="cart-items"></ul>
+                    <div class="cart-actions">
+                        <button id="checkout-btn">Checkout</button>
+                        <button id="clear-cart-btn">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner_text">
+                <h1>Welcome to <span class="highlight">Pizza Planet</span></h1>
+                <p>Out of This World Flavor, Straight from Pizza Planet.</p>
+            </div>
+        </section>
+        <section class="story">
+            <h2>Our Story</h2>
+            <p>Pizza Planet opened in 2045, founded by an alien couple who came down to Earth in 2025. It initially
+                started out as a small pop-up in Binghamton, but they instantaneously became a hit because of their
+                unique pizza combinations and flavor explosions from outer space! There's no other pizza like Pizza
+                Planet, our super secret alien family pizza recipe has been passed down for generations and we are glad
+                to be able to share it with humans on Earth.
+            <p>Although the alien couple retired and went back to their home planet, MIS, their Pizza Planet legacy
+                continues to be carried out by their 25 grandalienchildren. </p>
+            </p>
+        </section>
+        <section class="featured">
+            <h2>Featured Pizzas</h2>
+            <div class="home_pizzas">
+                <div class="home_meteor">
+                    <img src="img/meteor-meatball.JPEG">
+                    <a href="menu.html">
+                        <h4>The Meteor Meatball</h4>
+                    </a>
+                </div>
+                <div class="home_comet">
+                    <img src="img/bbq-comet.JPEG">
+                    <a href="menu.html">
+                        <h4>BBQ Comet</h4>
+                    </a>
+                </div>
+                <div class="home_build">
+                    <img src="img/build-pizza.JPEG">
+                    <a href="buildpizza.html">
+                        <h4>Build Your Own</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--
            <section class="button_overview">
                <div class="buttons">
                    <a class="menu_button" href="menu.html">Go to Menu</a>
                </div>
            </section>
            -->
-       </main>
-       <script src="js/placeholder.js"></script>
-       <footer>
-           <div class="footer-content">
-               <div>
-                   <p><strong>Pizza Planet</strong></p>
-                   <p>165 Court St, Binghamton, NY 13870</p>
-               </div>
-               <div>
-                   <p><strong>Hours</strong></p>
-                   <p>Open Daily: 11AM – 9PM</p>
-               </div>
-               <div>
-                   <p><strong>Contact</strong></p>
-                   <p>(917) 999-9999</p>
-                   <p><a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a></p>
-               </div>
-           </div>
-           <p style="margin-top: 1rem;">&copy; 2025 Pizza Planet. All Rights Reserved.</p>
-       </footer>
-   </body>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/placeholder.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Pizza Planet</strong></p>
+                <p>165 Court St, Binghamton, NY 13870</p>
+            </div>
+            <div>
+                <p><strong>Hours</strong></p>
+                <p>Open Daily: 11AM – 9PM</p>
+            </div>
+            <div>
+                <p><strong>Contact</strong></p>
+                <p>(917) 999-9999</p>
+                <p><a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a></p>
+            </div>
+        </div>
+        <p style="margin-top: 1rem;">&copy; 2025 Pizza Planet. All Rights Reserved.</p>
+    </footer>
+</body>
+
 </html>
-
-
-
