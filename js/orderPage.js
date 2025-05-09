@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       localStorage.setItem("pizzaCart", JSON.stringify(cart));
 
-      alert(`✅ ${title} added to cart!`);
+      alert(`${title} added to cart!`);
       location.reload();
     });
   });
@@ -31,15 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll('input[name="toppings"]:checked')
         .forEach((input) => toppings.push(input.value));
 
-      const name = `Custom Pizza (${sauce}, ${cheese}, ${
-        toppings.join(", ") || "no toppings"
-      })`;
+      const name = `Custom Pizza (${sauce}, ${cheese}, ${toppings.join(", ") || "no toppings"
+        })`;
 
       cart.push({ name, quantity: qty, type: "custom" });
 
       localStorage.setItem("pizzaCart", JSON.stringify(cart));
 
-      alert(`✅ ${name} added to cart!`);
+      alert(`${name} added to cart!`);
       location.reload();
     });
   }
