@@ -1,154 +1,141 @@
+/* General layout */
 main {
     max-width: 1200px;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     padding: 0 1.5rem;
-}
-
-.banner {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.banner h1 {
-    font-size: 1.6rem;
-    color: #2e2e2e;
-}
-
-.banner p,
-.specialty-section p,
-.builder-section p {
-    font-size: 0.95rem;
-    color: #555;
-    margin: 0 0 1.5rem;
-}
-
-.featured {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-}
-
-form {
-    font-size: 0.95rem;
-}
-
-form fieldset {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-form legend {
-    font-weight: bold;
-    font-size: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.6;
     color: #333;
 }
 
-form label {
-    display: block;
-    margin-bottom: 0.3rem;
+/* Header banner */
+.banner {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-label[for*="qty"],
-label[for="quantity"] {
-    display: flex;
-    align-items: center;
-    font-size: 0.95rem;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+.banner h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
 }
 
-input[type="number"] {
-    padding: 0.3rem;
-    width: 60px;
-    font-size: 0.9rem;
-    display: inline-block;
-    vertical-align: middle;
+.banner p {
+    font-size: 1rem;
+    color: #555;
 }
 
-button,
-.specialty-controls button,
-.specialty-item button,
-button[type="submit"] {
-    background: #2e2e2e;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    cursor: pointer;
+/* Sections */
+.specialty-section,
+.builder-section {
+    margin-bottom: 3rem;
 }
 
-button:hover {
-    background: #444;
+.specialty-section h2,
+.builder-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
 }
 
-#buildPizza button[type="submit"] {
-    margin-top: 0.5rem;
-}
-
+/* Cards layout */
 .specialty-pizzas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 .specialty-item {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.specialty-item:hover {
+    transform: translateY(-4px);
 }
 
 .specialty-item img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .specialty-item h4 {
-    margin: 0.75rem 1rem 0.25rem;
-    font-size: 1.1rem;
-    color: #2e2e2e;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0.75rem 1rem 0.5rem;
+    color: #222;
 }
 
 .specialty-item p {
     margin: 0.25rem 1rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #555;
-    flex-grow: 1;
 }
 
-.specialty-controls {
+/* Cart controls */
+.specialty-controls,
+.form-quantity {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin: 1rem;
     flex-wrap: wrap;
 }
 
-.specialty-section,
-.builder-section {
-    margin-bottom: 2rem;
+input[type="number"] {
+    padding: 0.4rem;
+    width: 70px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.specialty-section h2,
-.builder-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.25rem;
-    color: #2e2e2e;
+/* Buttons */
+button,
+.specialty-controls button,
+.specialty-item button,
+button[type="submit"] {
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.form-quantity {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+button:hover {
+    background: #333;
+}
+
+/* Pizza Builder Form */
+form {
+    font-size: 1rem;
+}
+
+form fieldset {
+    padding: 1rem;
     margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+form legend {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #1a1a1a;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
 }
