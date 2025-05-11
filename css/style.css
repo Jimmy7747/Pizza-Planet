@@ -40,7 +40,6 @@ input,
   border-bottom-right-radius: 90% 20%;
 }
 
-.banner h1,
 .banner h1 {
   font-size: 5rem;
   font-weight: bold;
@@ -139,7 +138,9 @@ footer a:hover {
 }
 
 .story h2,
-.featured h2 {
+.featured h2,
+.builder-section h2 
+.specialty-section h2{
   font-size: 2.5rem;
   letter-spacing: -0.06em;
   font-weight: bold;
@@ -169,10 +170,11 @@ footer a:hover {
   text-decoration: none;
 }
 
-.home_pizzas img {
+.home_pizzas img,
+.specialty-pizzas img {
   width: 100%;
   aspect-ratio: 2/1;
-  object-fit: cover;
+  object-fit:cover;
 }
 
 /* ------------------MENU--------------------- */
