@@ -1,121 +1,207 @@
-/* Sections */
-.specialty-section,
-.builder-section {
-    margin-top: var(--space-medium);
-    margin-bottom: var(--space-medium);
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.pizza-builder {
-    max-width: 40rem;
-}
-.builder-section p ,
-.specialty-section p {
-    margin-bottom: 0.5rem;
-}
+<head>
+    <title>Order</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/orderPage.css" />
 
-.banner p {
-    font-size: 1.3rem;
-    line-height: 3;
-    padding-bottom: 0.3rem;
-  }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet" />
+</head>
 
-/* Cards layout */
-.specialty-pizzas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    align-items: center;
-}
+<body>
+    <header>
+        <h2 class="logo"><a href="index.html">Pizza Planet</a></h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="orderPage.html">Order Online</a>
 
-.specialty-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease-in-out;
-}
+            <div id="cart-container" style="position: relative; cursor: pointer">
+                Cart <span id="cart-count">0</span>
+                <div id="cart-dropdown" class="hidden">
+                    <ul id="cart-items"></ul>
+                    <div class="cart-actions">
+                        <button id="checkout-btn">Checkout</button>
+                        <button id="clear-cart-btn">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-.specialty-item:hover {
-    transform: translateY(-4px);
-}
+    <main>
+        <section class="banner">
+            <h1>Intergalactic Pizza<br><span class="highlight">Ordering System</span></h1>
+            <p>Order Your Pizza Today - Your Style!</p>
+        </section>
 
-.specialty-item img {
-    width: 100%;
-    height: auto;
-}
+        <section class="featured">
+            <section class="specialty-section">
+                <h2>Specialty Pizzas</h2>
+                <p>Our house specials, famous throughout the galaxy!</p>
 
-.specialty-item h4 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin: 0.75rem 1rem 0.5rem;
-    color: #222;
-}
+                <div class="specialty-pizzas">
+                    <div class="specialty-item">
+                        <img src="img/meteor-meatball.JPEG" alt="The Meteor Meatball" />
+                        <h4>The Meteor Meatball – $15.99</h4>
+                        <p>A meatball explosion from outer space!</p>
+                        <p>
+                            <strong>Toppings:</strong> Meatballs, Pepperoni, Sausage, Bacon
+                        </p>
+                        <div class="specialty-controls">
+                            <label for="meteor-qty">Quantity:</label>
+                            <input type="number" id="meteor-qty" name="quantity" value="1" min="1" />
+                            <button>Add to Order</button>
+                        </div>
+                    </div>
 
-.specialty-item p {
-    margin: 0.25rem 1rem;
-    font-size: 0.95rem;
-    color: #555;
-}
+                    <div class="specialty-item">
+                        <img src="img/bbq-comet.JPEG"alt="BBQ Comet" />
+                        <h4>BBQ Comet – $16.99</h4>
+                        <p>This smoky comet leaves a flavor trail!</p>
+                        <p>
+                            <strong>Toppings:</strong> BBQ Chicken, Red Onions, Mozzarella,
+                            Cilantro
+                        </p>
+                        <div class="specialty-controls">
+                            <label for="bbqcomet-qty">Quantity:</label>
+                            <input type="number" id="bbqcomet-qty" name="quantity" value="1" min="1" />
+                            <button>Add to Order</button>
+                        </div>
+                    </div>
 
-/* Cart controls */
-.specialty-controls,
-.form-quantity {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin: 1rem;
-    flex-wrap: wrap;
-}
+                    <div class="specialty-item">
+                        <img src="img/galacticgarden.jpg" alt="Galactic Garden" />
+                        <h4>Galactic Garden – $14.99</h4>
+                        <p>A veggie blast from the green side of the galaxy!</p>
+                        <p>
+                            <strong>Toppings:</strong> Mushrooms, Onions, Green Peppers,
+                            Black Olives, Tomatoes
+                        </p>
+                        <div class="specialty-controls">
+                            <label for="garden-qty">Quantity:</label>
+                            <input type="number" id="garden-qty" name="quantity" value="1" min="1" />
+                            <button>Add to Order</button>
+                        </div>
+                    </div>
 
-input[type="number"] {
-    padding: 0.4rem;
-    width: 70px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+                    <div class="specialty-item">
+                        <img src="img/supernova.jpg" alt="Supernova Spice" />
+                        <h4>Supernova Spice – $17.99</h4>
+                        <p>This one brings the heat from the heart of a star!</p>
+                        <p>
+                            <strong>Toppings:</strong> Buffalo Sauce, Jalapeños, Spicy
+                            Chicken, Red Pepper Flakes
+                        </p>
+                        <div class="specialty-controls">
+                            <label for="supernova-qty">Quantity:</label>
+                            <input type="number" id="supernova-qty" name="quantity" value="1" min="1" />
+                            <button>Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-/* Buttons */
-button,
-.specialty-controls button,
-.specialty-item button,
-button[type="submit"] {
-    background: #111;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
+            <section class="builder-section">
+                <h2>Build Your Own Pizza</h2>
+                <p>
+                    Not keen on our specialties? Create your own pizza masterpiece
+                    below! <strong>$10 base price and $1 per topping.</strong>
+                </p>
 
-button:hover {
-    background: #333;
-}
+                <div class="pizza-builder">
+                    <div class="pizza-options">
+                        <form id="buildPizza">
+                            <fieldset>
+                                <legend>Sauce</legend>
+                                <label><input type="radio" name="sauce" value="Marinara" checked />
+                                    Marinara</label><br />
+                                <label><input type="radio" name="sauce" value="Alfredo" />
+                                    Alfredo</label><br />
+                                <label><input type="radio" name="sauce" value="Buffalo" />
+                                    Buffalo</label><br />
+                                <label><input type="radio" name="sauce" value="Barbeque" />
+                                    Barbeque</label>
+                            </fieldset>
 
-/* Pizza Builder Form */
-form {
-    font-size: 1rem;
-}
+                            <fieldset>
+                                <legend>Cheese</legend>
+                                <label><input type="radio" name="cheese" value="Regular" checked />
+                                    Regular Cheese</label><br />
+                                <label><input type="radio" name="cheese" value="Extra" /> Extra
+                                    Cheese</label>
+                            </fieldset>
 
-form fieldset {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
+                            <fieldset>
+                                <legend>Meats</legend>
+                                <label><input type="checkbox" name="toppings" value="Pepperoni" />
+                                    Pepperoni</label><br />
+                                <label><input type="checkbox" name="toppings" value="Sausage" />
+                                    Sausage</label><br />
+                                <label><input type="checkbox" name="toppings" value="Bacon" />
+                                    Bacon</label><br />
+                                <label><input type="checkbox" name="toppings" value="Chicken" />
+                                    Chicken</label>
+                            </fieldset>
 
-form legend {
-    font-weight: 600;
-    font-size: 1.05rem;
-    color: #1a1a1a;
-}
+                            <fieldset>
+                                <legend>Veggies</legend>
+                                <label><input type="checkbox" name="toppings" value="Mushroom" />
+                                    Mushrooms</label><br />
+                                <label><input type="checkbox" name="toppings" value="Onion" />
+                                    Onions</label><br />
+                                <label><input type="checkbox" name="toppings" value="Pepper" />
+                                    Green Peppers</label><br />
+                                <label><input type="checkbox" name="toppings" value="Black olives" />
+                                    Black Olives</label><br />
+                                <label><input type="checkbox" name="toppings" value="Pineapple" />
+                                    Pineapples</label>
+                            </fieldset>
 
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
+                            <div class="form-quantity">
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" />
+                            </div>
+
+                            <button type="submit">Add to Order</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="js/global.js"></script>
+    <script src="js/orderPage.js"></script>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <p><strong>Pizza Planet</strong></p>
+                <p>165 Court St, Binghamton, NY 13870</p>
+            </div>
+            <div>
+                <p><strong>Hours</strong></p>
+                <p>Open Daily: 11AM – 9PM</p>
+            </div>
+            <div>
+                <p><strong>Contact</strong></p>
+                <p>(917) 999-9999</p>
+                <p>
+                    <a href="mailto:contact@pizzaplanet.com">contact@pizzaplanet.com</a>
+                </p>
+            </div>
+        </div>
+        <p style="margin-top: 1rem">
+            &copy; 2025 Pizza Planet. All Rights Reserved. A small sample change
+        </p>
+    </footer>
+</body>
+
+</html>
